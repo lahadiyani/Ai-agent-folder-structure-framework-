@@ -13,10 +13,8 @@ Framework ini dirancang untuk membangun berbagai AI agent modular yang fleksibel
 - **CI/CD Ready**: Struktur siap untuk testing, containerization, dan deployment otomatis.
 - **REST API Ready**: Mudah diintegrasikan dengan Flask atau FastAPI.
 
----
-
 ## Struktur Folder
-
+```
 ai_agent_framework/
 │
 ├── app/
@@ -76,7 +74,7 @@ ai_agent_framework/
 ├── docker-compose.yml             
 ├── main.py                        
 └── README.md
----
+```
 
 ## Instalasi & Setup
 
