@@ -89,33 +89,33 @@ pip install -r requirements.txt
 
 # Copy env
 cp .env.example .env
-
+```
 
 ---
 
 Menjalankan Aplikasi
-
+```
 python main.py
-
+```
 
 ---
 
 Struktur main.py
-
+```
 from app import create_app
 
 app = create_app(config_name="development")
 
 if __name__ == "__main__":
     app.run()
-
+```
 
 ---
 
 Testing
-
+```
 pytest tests/
-
+```
 
 ---
 
