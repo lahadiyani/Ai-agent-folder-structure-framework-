@@ -1,4 +1,4 @@
-# AI Agent Framework (LangChain-based)
+# AI Agent Framework
 
 Framework ini dirancang untuk membangun berbagai AI agent modular yang fleksibel, scalable, dan maintainable menggunakan **LangChain** sebagai library utama. Dengan pendekatan **MVC**, **application factory pattern**, dan struktur modular, framework ini cocok untuk kolaborasi tim serta siap diintegrasikan dalam CI/CD pipeline.
 
@@ -17,8 +17,65 @@ Framework ini dirancang untuk membangun berbagai AI agent modular yang fleksibel
 
 ## Struktur Folder
 
-ai_agent_framework/ ├── app/ │   ├── agents/             # Definisi modular agent │   ├── chains/             # LangChain chains │   ├── tools/              # Integrasi API eksternal │   ├── memory/             # Memory dan vectorstore │   ├── prompts/            # Prompt templates │   ├── routes/             # REST API routes │   ├── controllers/        # Orchestration logic │   └── services/           # Inter-agent service layer │ ├── config/                 # Konfigurasi environment ├── tests/                  # Unit & integration tests ├── scripts/                # DevOps, deploy, CLI, dll ├── main.py                 # Entry point utama ├── .env                    # Variabel environment ├── Dockerfile              # Containerization ├── docker-compose.yml      # Service orchestration ├── requirements.txt        # Dependencies pip └── README.md
-
+ai_agent_framework/
+│
+├── app/
+│   ├── __init__.py                
+│   ├── agents/                    
+│   │   ├── base_agent.py
+│   │   ├── researcher_agent.py
+│   │   ├── coder_agent.py
+│   │   └── planner_agent.py
+│   │
+│   ├── chains/                    
+│   │   ├── base_chain.py
+│   │   └── custom_chain.py
+│   │
+│   ├── tools/                     
+│   │   ├── browser.py
+│   │   ├── search.py
+│   │   └── code_executor.py
+│   │
+│   ├── memory/                    
+│   │   ├── base_memory.py
+│   │   └── langchain_vectorstore.py
+│   │
+│   ├── prompts/                   
+│   │   ├── planner_prompt.txt
+│   │   └── coder_prompt.txt
+│   │
+│   ├── routes/                    
+│   │   └── agents_api.py
+│   │
+│   ├── controllers/               
+│   │   └── agent_controller.py
+│   │
+│   └── services/                  
+│       ├── task_manager.py
+│       └── agent_orchestrator.py
+│
+├── config/
+│   ├── __init__.py
+│   ├── default.py
+│   ├── development.py
+│   └── production.py
+│
+├── tests/                         
+│   ├── test_agents/
+│   ├── test_services/
+│   └── test_routes/
+│
+├── scripts/                       
+│   └── deploy.sh
+│
+├── .env                           
+├── .gitignore
+├── requirements.txt               
+├── pyproject.toml                 
+├── Dockerfile                     
+├── docker-compose.yml             
+├── main.py                        
+└── README.md
 ---
 
 ## Instalasi & Setup
