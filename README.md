@@ -87,8 +87,6 @@ python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 
-# Copy env
-cp .env.example .env
 ```
 
 ---
